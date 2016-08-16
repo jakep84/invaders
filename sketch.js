@@ -31,11 +31,12 @@ function draw() {
 
 
 function keyPressed() {
-  
+  var rnd = new Round(you.x, height/2);
+
   if (key === ' ') {
-   var rnd = new Round(width/2, height/2);
-you.move(1);
-  }
+    // rnd.push(rnd);
+    println("space pressed");
+  };
   
   if (keyCode === RIGHT_ARROW) {
     you.move(1);
