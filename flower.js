@@ -4,7 +4,7 @@ function Flower() {
   
   this.show = function() {
     fill(255, 0, 200);
-    ellipse(this.x, this.y, 60, 60);
+    ellipse(this.x, this.y, 60);
   }
   
 }

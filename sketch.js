@@ -1,17 +1,17 @@
 var ship; 
-var flowers;
+var flowers =[];
 function setup() {
   createCanvas(600,400);
   ship = new Ship();
-  for (var i = 0; i < 5; i++ ) {
-  flowers[i] = new Flower();
+  for (var i = 0; i < 6; i++ ) {
+  flowers[i] = new Flower(i*80+80, 60);
   }
 }
 
 function draw() {
     background(51);
     ship.show();
-    for (var i = 0; i < 5; i++ ) {
+    for (var i = 0; i < flowers.length; i++ ) {
       flowers[i].show(); 
   }
 } 
