@@ -1,12 +1,13 @@
-function Drop(x, y) {
+function Round(x, y) {
   this.x = x;
   this.y = y;
   
   this.show = function() {
-    fill(50, 0, 200);
+    noStroke();
+    fill(70, 0, 0);
     ellipse(this.x, this.y, 8, 8);
   }
   this.move = function() {
-    this.y = this.y -1; 
+    this.y = this.y - 1; 
   }
 }

@@ -1,29 +1,45 @@
-var ship; 
-var flowers =[];
-var drop;
+var you; 
+var invaders = [];
+var rnd = [];
+
+
 function setup() {
   createCanvas(600,400);
-  ship = new Ship();
+  you = new You();
+  rnd = new Round(width/2, height/2);
   for (var i = 0; i < 6; i++ ) {
-  flowers[i] = new Flower(i*80+80, 60);
-  drop = new Drop(width/2, height/2);
+    invaders[i] = new Invader(i*80+80, 60);
   }
-}
+};
+
 
 function draw() {
     background(51);
-    ship.show();
-    for (var i = 0; i < flowers.length; i++ ) {
-      flowers[i].show(); 
-      drop.show();
-      drop.move();
-  }
-} 
+    you.show();
+      rnd.show();
+      rnd.move();
+    for (var i = 0 ; i < rnd.length; i++) {
+    rnd[i].show();
+    rnd[i].move();
+      }
+        
+   for (var i = 0; i < invaders.length; i++ ) {
+      invaders[i].show(); 
+    }
+};
+
+
 
 function keyPressed() {
-  if (keyCode === RIGHT_ARROW) {
-    ship.move(1);
-  } else if (keyCode === LEFT_ARROW) {
-    ship.move(-1);
+  
+  if (key === ' ') {
+   var rnd = new Round(width/2, height/2);
+you.move(1);
   }
-}
+  
+  if (keyCode === RIGHT_ARROW) {
+    you.move(1);
+  } else if (keyCode === LEFT_ARROW) {
+    you.move(-1);
+  }
+};

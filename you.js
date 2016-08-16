@@ -1,4 +1,4 @@
-function Ship() {
+function You() {
   this.x = width/2;
   
   
