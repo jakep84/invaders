@@ -36,11 +36,19 @@ function keyPressed() {
   if (key === ' ') {
     // rnd.push(rnd);
     println("space pressed");
+    rnd.push(rnd);
+    println("round fired");
   };
   
   if (keyCode === RIGHT_ARROW) {
+    println("right pressed");
     you.move(1);
+    println("you moved right");
+
   } else if (keyCode === LEFT_ARROW) {
+    println("left pressed");
     you.move(-1);
+    println("you moved left");
+
   }
 };
