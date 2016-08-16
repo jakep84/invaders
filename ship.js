@@ -4,7 +4,7 @@ function Ship() {
   
   this.show = function() { 
     fill(255);
-    rectMode(CENTER);
+    //rectMode(CENTER);
     rect(this.x, height-20, 20, 60);
 }
 
